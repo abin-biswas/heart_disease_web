@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Heart Disease Prediction System{% endblock %}
+
+{% block content %}
+
+    <!-- Elegant Health Carousel -->
+<div id="elegantCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Minimalist Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#elegantCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#elegantCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#elegantCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    
+    <!-- Carousel Items with Overlay -->
+    <div class="carousel-inner rounded-3 overflow-hidden">
+        <div class="carousel-item active">
+            <div class="position-relative">
+                <img src="static/images/CA-1.png" class="d-block w-100" alt="Heart health analysis" style="min-height: 400px; object-fit: cover;">
+                <div class="carousel-overlay d-flex align-items-center">
+                    <div class="container text-start text-white">
+                        <h2 class="display-5 fw-light mb-3">HEART DISEASE PREDICTION </h2>
+                        <p class="lead d-none d-md-block">Our AI-powered system evaluates your cardiovascular risk factors with precision</p>
+                        <a href="#features" class="btn btn-outline-light btn-lg mt-3 px-4 py-2 rounded-pill">GET STARTED</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item">
+            <div class="position-relative">
+                <img src="static/images/CA-2.png" class="d-block w-100" alt="Health tracking dashboard" style="min-height: 400px; object-fit: cover;">
+                <div class="carousel-overlay d-flex align-items-center">
+                    <div class="container text-start text-white">
+                        <h2 class="display-5 fw-light mb-3">GET IT DIAGNOSED HERE</h2>
+                        <p class="lead d-none d-md-block">Monitor all your health metrics in one beautifully designed interface</p>
+                        <a href="#features" class="btn btn-outline-light btn-lg mt-3 px-4 py-2 rounded-pill">View Features</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item">
+            <div class="position-relative">
+                <img src="static/images/CA-3.png" class="d-block w-100" alt="Medical insights" style="min-height: 400px; object-fit: cover;">
+                <div class="carousel-overlay d-flex align-items-center">
+                    <div class="container text-start text-white">
+                        <h2 class="display-5 fw-light mb-3"></h2>
+                        <p class="lead d-none d-md-block"></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Refined Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#elegantCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#elegantCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<style>
+    /* Elegant Carousel Styling */
+    #elegantCarousel {
+        max-width: 1400px;
+        margin: 2rem auto;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        border-radius: 12px;
+    }
+    
+    .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        padding: 0 5%;
+    }
+    
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 6px;
+        border: 1px solid white;
+        background: transparent;
+        opacity: 0.7;
+    }
+    
+    .carousel-indicators .active {
+        background: white;
+        opacity: 1;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        width: 5%;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+        opacity: 1;
+    }
+    
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: 100%;
+        filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+    }
+    
+    /* Fade transition */
+    .carousel-fade .carousel-item {
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    
+    .carousel-fade .carousel-item.active {
+        opacity: 1;
+    }
+    
+    @media (max-width: 768px) {
+        .carousel-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .display-5 {
+            font-size: 1.8rem;
+        }
+        
+        .lead {
+            font-size: 1rem;
+        }
+        
+        .btn-lg {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<div class="container my-5">
+    <div class="row g-4 align-items-stretch">
+        <!-- Left Column - Hero Content + Auth Cards (Stacked) -->
+        <div class="col-lg-6">
+            <div class="d-flex flex-column h-100">
+                <!-- Compact Hero Section -->
+                <div class="mb-4">
+                    <h1 class="fw-bold" style="font-size: 2.2rem;">Take Control of Your Heart Health</h1>
+                    <p class="lead mb-3" style="font-size: 1.1rem;">Early detection using advanced machine learning algorithms</p>
+                    <div class="d-lg-none text-center mb-3">
+                        <img src="{{ url_for('static', filename='images/heart-illustration.png') }}" 
+                            class="img-fluid"
+                            style="max-height: 200px;">
+                    </div>
+                </div>
+
+                <!-- Auth Cards -->
+                <div class="row g-3 mt-auto">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm" style="border-top: 3px solid #0d6efd;">
+                            <div class="card-header bg-primary bg-opacity-10 py-2">
+                                <h6 class="m-0 text-primary fw-bold text-center">
+                                    <i class="bi bi-person-heart me-1"></i>Patient
+                                </h6>
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <p class="small text-muted mb-2">Predict heart disease risk</p>
+                                <div class="d-grid gap-2 mt-auto">
+                                    <a href="{{ url_for('user_login') }}" class="btn btn-sm btn-primary">
+                                        <i class="bi bi-box-arrow-in-right"></i> Login
+                                    </a>
+                                    <a href="{{ url_for('user_register') }}" class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-person-plus"></i> Register
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm" style="border-top: 3px solid #dc3545;">
+                            <div class="card-header bg-danger bg-opacity-10 py-2">
+                                <h6 class="m-0 text-danger fw-bold text-center">
+                                    <i class="bi bi-shield-lock me-1"></i>Admin
+                                </h6>
+                            </div>
+                            <div class="card-body p-3 d-flex flex-column">
+                                <p class="small text-muted mb-2">Manage system users</p>
+                                <div class="d-grid gap-2 mt-auto">
+                                    <a href="{{ url_for('admin_login') }}" class="btn btn-sm btn-danger">
+                                        <i class="bi bi-box-arrow-in-right"></i> Login
+                                    </a>
+                                    <a href="{{ url_for('admin_register') }}" class="btn btn-sm btn-outline-danger">
+                                        <i class="bi bi-person-plus"></i> Register
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column - Hero Image (Desktop only) -->
+        <div class="col-lg-6 d-none d-lg-block">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <img src="{{ url_for('static', filename='images/heart-illustration.png') }}" 
+                    class="img-fluid"
+                    style="max-height: 350px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Features Section -->
+    <div class="row mt-5">
+        <div class="col-12 text-center mb-4">
+            <h3>How It Works</h3>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-clipboard2-pulse fs-1 text-primary"></i>
+                    <h5 class="mt-3">1. Enter Your Data</h5>
+                    <p>Provide your health metrics like cholesterol, blood pressure, etc.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-cpu fs-1 text-primary"></i>
+                    <h5 class="mt-3">2. AI Prediction</h5>
+                    <p>Our SVM model analyzes your heart disease risk.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-graph-up fs-1 text-primary"></i>
+                    <h5 class="mt-3">3. Track Results</h5>
+                    <p>Monitor your risk over time in your dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 id="tm_txt" > TEAM MEMBERS:-</h1>
+
+<div class="founder_cards">
+
+    <div class="card founders" style="width: 24rem;">
+        <img src="static/images/soumyadip.png" class="card-img-top" id="soumyadip_img" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Soumyadip Giri</h5>
+        <!-- p class="card-text">UG/02/BTCSE/2022/16</p -->
+        <a href="https://www.linkedin.com/in/soumyadip-giri--/" class="btn btn-primary prof_btn" id="re_direct_ids"> VISIT PROFILE</a>
+        </div>
+    </div>
+
+    <div class="card founders" style="width: 24rem;">
+        <img src="static/images/aritra.png" class="card-img-top" id="aritra_img" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Aritra Bose</h5>
+        <!-- p class="card-text">UG/02/BTCSE/2022/046</p -->
+        <a href="http://www.linkedin.com/in/aritra-bose-b284a7253" class="btn btn-primary prof_btn"  id="re_direct_ids">VISIT PROFILE  </a>
+        </div>
+    </div>
+
+    <div class="card founders" style="width: 24rem;">
+        <img src="static/images/priyanshu.png" class="card-img-top" id="priyanshu_img" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Priyanshu Sekhar Pandey</h5>
+        <!-- p class="card-text">UG/02/BTCSE/2022/123</p -->
+        <a href="https://www.linkedin.com/in/priyanshu-sekhar-pandey-723552210/" class="btn btn-primary prof_btn"  id="re_direct_ids">VISIT PROFILE</a>
+        </div>
+    </div>
+
+    <div class="card founders" style="width: 24rem;">
+        <img src="static/images/abin.png" class="card-img-top" id="abin_img" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Abin Biswas</h5>
+        <!-- p class="card-text">UG/02/BTCSE/2022/052</p -->
+        <a href="http://www.linkedin.com/in/abin-biswas" class="btn btn-primary prof_btn"  id="re_direct_ids">VISIT PROFILE</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
